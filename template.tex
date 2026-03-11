@@ -1,0 +1,143 @@
+\documentclass[final]{beamer}
+
+% --- Packages ---
+\usepackage[T1]{fontenc}
+\usepackage[orientation=portrait,size=a0,scale=1]{beamerposter} % Sets A0 Portrait 
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage[absolute]{textpos}
+\usepackage[left=4cm,right=4cm,top=3.55cm,bottom=3.55cm]{geometry}
+
+\usepackage{fontspec}
+\setmainfont{UCLSans-Regular.ttf}
+\setsansfont{UCLSans-Regular.ttf}
+
+% --- UCL Color Palette & Styling ---
+\definecolor{uclpurple}{RGB}{58,23,85}
+\definecolor{uclpurplebg}{RGB}{241,234,239}
+
+\setbeamercolor{headline}{bg=uclpurple,fg=white}
+\setbeamerfont{title}{family=\sffamily, size={\fontsize{72}{72}}}
+\setbeamerfont{author}{family=\sffamily, size={\fontsize{36}{48}}}
+\setbeamerfont{institute}{family=\sffamily, size={\fontsize{36}{36}}}
+\setbeamerfont{body}{family=\sffamily,size={\fontsize{36}{36}}}
+\setbeamercolor{block title}{fg=white,bg=uclpurple} % UCL Black
+\setbeamercolor{block body}{fg=black,bg=uclpurplebg}
+
+% --- Header Template ---
+\setbeamertemplate{headline}{  
+  \leavevmode
+  \begin{beamercolorbox}[wd=84.1cm,dp=12.55cm,ht=6cm]{headline}
+    \vspace{0cm}
+    \columns
+      \column{4cm}
+      \column{14.22cm}
+        \centering
+        \includegraphics[]{UCLlogo.png}
+      \column{4.83cm}
+      \column{57.01cm}
+      \vspace{10cm}
+        \begin{minipage}[t][7.69cm]{1.0\textwidth}
+            \usebeamerfont{title}\inserttitle
+        \end{minipage}%
+        \vspace*{0pt} 
+        \vspace{1.5cm}
+            \columns
+            \column{0cm}
+            \column{31.11cm}
+                    \begin{minipage}[t][4.27cm]{1.0\textwidth}
+                        \usebeamerfont{author}\insertauthor
+                    \end{minipage}
+                    \vspace*{0pt} 
+            \column{0.5cm}
+            \column{24.7cm}
+                    \begin{minipage}[t][4.27cm]{1.0\textwidth}
+                        \usebeamerfont{institute}\insertinstitute
+                    \end{minipage}
+                    \vspace*{0pt} 
+            \column{0cm}
+            \endcolumns
+      \column{0.2\paperwidth}
+    \endcolumns
+  \end{beamercolorbox}
+  \hspace{0.05\paperwidth}\rule{\paperwidth}{0.5pt} % Divider line
+}
+
+% --- Poster Metadata ---
+\title{Research Project Title}
+\author{Researcher Name(s)}
+\institute{Department of (insert department),\\ University College London}
+
+\begin{document}
+\begin{frame}[t]
+\begin{minipage}[t][88.75cm][t]{1.0\textwidth}
+
+\begin{columns}[t]
+
+\usebeamerfont{body}
+% --- Left Column ---
+\begin{column}{37.44cm}
+  \begin{block}{Introduction}
+  
+    This template replicates the portrait A0 PPTX template dimensions. 
+  \end{block}
+
+  \begin{block}{Methodology}
+    Detailed descriptions of your process go here. 
+  \end{block}
+\end{column}
+% --- Right Column ---
+\begin{column}{37.44cm}
+  \begin{block}{Results}
+    \centering
+    \begin{tabular}{cc}
+        \toprule
+        \textbf{Category} & \textbf{Impact} \\
+        \midrule
+        Alpha & 0.85 \\
+        Beta & 1.12 \\
+        \bottomrule
+    \end{tabular}
+  \end{block}
+
+  \begin{block}{Conclusion}
+    Summary of the research findings.
+  \end{block}
+  
+  \begin{block}{References}
+    \footnotesize
+    1. Author, A. (2026). Title of Research. Journal Name.
+  \end{block}
+\end{column}
+
+\end{columns}
+
+\end{minipage}
+
+\begin{columns}[b]
+\usebeamerfont{body}
+\begin{column}{0cm} % keeps contact block in line
+\end{column}
+\begin{column}{37.44cm}
+
+        \begin{minipage}[t][5cm][t]{1.0\textwidth}
+            \usebeamerfont{contact} Add contact details here
+        \end{minipage}%
+
+\end{column}
+\begin{column}{0cm}
+\end{column}
+\begin{column}{37.44cm}
+
+        \begin{minipage}[t][5cm][t]{1.0\textwidth}
+            \usebeamerfont{collablogos} Add collaborator logos here
+        \end{minipage}%
+
+\end{column}
+\begin{column}{0cm} % keeps logo block in line
+\end{column}
+\end{columns}
+
+\end{frame}
+\end{document}
