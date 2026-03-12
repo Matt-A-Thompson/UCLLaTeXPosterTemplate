@@ -11,7 +11,10 @@
 
 \usepackage{fontspec}
 \setmainfont{UCLSans-Regular.ttf}
-\setsansfont{UCLSans-Regular.ttf}
+\setsansfont[BoldFont= UCLSans-Bold.ttf,
+ItalicFont = UCLSans-Italic.ttf,
+BoldItalicFont=UCLSans-BoldItalic.ttf
+]{UCLSans-Regular.ttf}
 
 % --- UCL Color Palette & Styling ---
 \definecolor{uclpurple}{RGB}{58,23,85}
@@ -24,6 +27,9 @@
 \setbeamerfont{body}{family=\sffamily,size={\fontsize{36}{36}}}
 \setbeamercolor{block title}{fg=white,bg=uclpurple} % UCL Black
 \setbeamercolor{block body}{fg=black,bg=uclpurplebg}
+\setbeamercolor{caption name}{fg=uclpurple}
+\setbeamercolor{bibliography item}{fg=uclpurple}
+\setbeamercolor{bibliography entry author}{fg=uclpurple}
 
 % --- Header Template ---
 \setbeamertemplate{headline}{  
